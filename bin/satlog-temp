@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# SatoshiLog copyright 2024 st3b1t
+#
+
+cat /sys/class/thermal/thermal_zone*/temp | cut -c-2
