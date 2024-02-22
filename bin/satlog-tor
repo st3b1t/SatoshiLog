@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# SatoshiLog copyright 2024 st3b1t
+#
+
+SATLOG_NLOG=1000
+#define global for all scripts
+
+journalctl -n $SATLOG_NLOG -f -u tor
