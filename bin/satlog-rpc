@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# usage: echo server.banner | satlog-rpc 127.0.0.1 50001
+
+read METHOD
+
+HOST=$1
+PORT=$2
+URL="http://${HOST}:${PORT}/"
+
+JSON="{\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"${METHOD}\",\"params\":[\"satlog-rpc-method\",\"1.4\"]}"
+DATA=`echo -e "${JSON}\n"`
+
+echo $DATA | netcat $HOST $PORT
