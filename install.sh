@@ -1,6 +1,3 @@
 #!/bin/sh
 
-#TODO
-
-sudo cp -r bin/satlog-* /usr/local/bin/
-sudo chmod 0755 bin/satlog-*
+sudo install -m 0755 -o root -g root -t /usr/local/bin ./bin/satlog-*
